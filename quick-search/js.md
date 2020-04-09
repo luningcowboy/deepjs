@@ -35,3 +35,28 @@ var myvar = "my value";
     var myvar = "local value";
 })();
 ```
+3. 函数提升:
+对于函数来说，函数声明回被提升到顶部，而函数表达式不会。
+```js
+foo();
+function foo(){
+    console.log('foo');
+}
+
+//baz(); Error
+var baz = function(){
+    console.log('baz');
+};
+```
+4. 数据类型:
+- boolean: 只有两个值`true`和`false`
+- null 表明null值
+- undefined 表示变量未定义到属性
+- number 整数或浮点数
+- BigInt 任意精度到整数
+- String 字符串
+- Symbol 代表,一种实例是唯一切不可变到类型
+- Object 对象
+
+5. 数据类型转换
+字符串转数字`parseInt`和`parseFloat`
