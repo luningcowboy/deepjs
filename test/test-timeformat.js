@@ -1,4 +1,3 @@
-
 function num2Second(num){
     var ret = '';
     if(num >= 0 && num <= 60){

@@ -1,12 +1,16 @@
 var foo = {
-    bar: ''
+    // js并没有保护hasOwnProperty这个方法，所以尽量使用Object原型上的hasOwnProperty属性
+    hasOwnProperty: function(){
+        return false;
+    },
+    bar: 'this is bar'
 };
 // hasOwnProperty
 //
 
 // bad
 var hasBar = foo.hasOwnProperty("bar");
-console.log(hasBar); // true
+console.log(hasBar); // false 
 // good
 hasBar = Object.prototype.hasOwnProperty.call(foo, "bar");
 console.log(hasBar); // true
