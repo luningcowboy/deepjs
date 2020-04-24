@@ -95,4 +95,15 @@ function testHanMing(){
 var x = y = 100;
 console.log(x, y);
 console.log(a = 100);
-
+var c = {}
+c.a = c = [];
+console.log(c.a);
+var a = {n:1};
+a.n = a = {n:2};
+console.log(a.n);
+{
+    var a = {n:1}, ref = a;
+    a.x = a = {n:2};
+    console.log(a.x);
+    console.log(ref.x);
+}
