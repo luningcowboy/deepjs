@@ -91,4 +91,9 @@ function testHanMing(){
     console.log('<<<testHanMing');
 }
 //testHanMing();
-testSearch();
+//testSearch();
+var x = y = 100;
+console.log(x, y);
+console.log(a = 100);
+
+
