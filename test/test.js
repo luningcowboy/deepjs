@@ -135,3 +135,11 @@ console.log(a.n);
     var a = {x: ()=>console.log('xxxx')};
     (1, a.x)();
 }
+{
+    function fff(type){
+        type = type || 'a';
+        console.log(type);
+    }
+    fff();
+    fff('b')
+}
