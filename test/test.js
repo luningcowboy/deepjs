@@ -104,6 +104,34 @@ console.log(a.n);
 {
     var a = {n:1}, ref = a;
     a.x = a = {n:2};
-    console.log(a.x);
-    console.log(ref.x);
+    console.log(a); // { n: 2 }
+    console.log(ref); //{ n: 1, x: { n: 2 } }
+}
+{
+    var i = 10, root = {index: 'NONE'}, node = root;
+    while(i > 0){
+        node.next = node = new Object;
+        node.index = i--;
+    }
+    node = root;
+    while(node = node.next){
+        console.log(node);
+    }
+    console.log(root);
+}
+
+{
+    var a = {x: 100};
+    with (a)
+       delete x;
+    console.log(a);
+    console.log((0,1),(1));
+    console.log((eval)('var x = 1;'));
+    console.log((0, eval)('var y = 2;'));
+    console.log(x);
+    console.log(y);
+}
+{
+    var a = {x: ()=>console.log('xxxx')};
+    (1, a.x)();
 }
