@@ -143,3 +143,16 @@ console.log(a.n);
     fff();
     fff('b')
 }
+{
+    var c = {value: null}, root = c;
+    var i = 0; 
+    while(i < 10){
+        c.next = c = {value: i};
+        i++;
+    }
+    var iter = root.next;
+    while(iter){
+        console.log(iter.value);// 0~9
+        iter = iter.next;
+    }
+}
